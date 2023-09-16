@@ -19,11 +19,15 @@ get ("/square/results") do
   erb(:square_results)
 end
 
-get("square_root/new") do 
+get("/square_root/new") do 
 
   erb(:square_root_new)
 end 
+
 get("/square_root/results") do 
+@num = params.fetch("users_number").to_f
+@result = Math.sqrt(@num)
+ erb(:square_root_results)
+end 
 
-
-  erb(:square_root_results)
+get("/")
