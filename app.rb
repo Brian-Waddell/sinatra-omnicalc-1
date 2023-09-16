@@ -30,4 +30,15 @@ get("/square_root/results") do
  erb(:square_root_results)
 end 
 
-get("/")
+get("/payment/new") do 
+
+  erb(:payment_new)
+  end 
+
+  get("/payment/results") do 
+   
+    @payment
+    @payment =  
+
+    erb(:payment_results)
+  end 
