@@ -5,21 +5,21 @@
     APR
   </dt>
   <dd>
-    4.5000%
+    <%=@Rate %>
   </dd>
 
   <dt>
     Number of years
   </dt>
   <dd>
-    30
+    <%= @num_of_periods%>
   </dd>
 
   <dt>
     Principal
   </dt>
   <dd>
-    $1,000,000.00
+    <%= @present_value %>
   </dd>
 
   <dt>
@@ -27,6 +27,7 @@
   </dt>
   <dd>
     $5,066.85
+    <%= @P %>
   </dd>
 </dl>
 
