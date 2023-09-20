@@ -15,7 +15,7 @@ end
 
 get ("/square/results") do 
   @the_num = params.fetch("users_number").to_f
-  @the_result = @the_num ** 2 
+  @the_result = @the_num ** 2.to_f
   erb(:square_results)
 end
 
@@ -26,7 +26,7 @@ end
 
 get("/square_root/results") do 
 @num = params.fetch("users_number").to_f
-@result = Math.sqrt(@num)
+@result = Math.sqrt(@num).to_f
  erb(:square_root_results)
 end 
 
@@ -66,4 +66,6 @@ get("/payment/new") do
     @maxi = params.fetch("user_max").to_f
 
     @random = rand(@mini .. @maxi).to_f
+
+    erb(:random_results)
   end 
